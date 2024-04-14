@@ -8,7 +8,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import AuthStackNavigator from './src/navigation/AuthStackNavigator';
+import AuthStackNavigator from './src/navigations/AuthStackNavigator';
 
 function App(): React.JSX.Element {
   return (
