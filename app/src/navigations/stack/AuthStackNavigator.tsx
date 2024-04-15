@@ -13,12 +13,36 @@ export type AuthStackParamList = {
 const Stack = createStackNavigator<AuthStackParamList>();
 function AuthStackNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        cardStyle: {
+          backgroundColor: 'white',
+        },
+        headerStyle: {
+          backgroundColor: 'white',
+          shadowColor: 'gray',
+        },
+        headerTitleStyle: {
+          fontSize: 15,
+          color: 'black',
+        },
+        headerTintColor: 'black',
+      }}>
       <Stack.Screen
         name={authNavigations.AUTH_HOME}
         component={AuthHomeScreen}
+        options={{
+          headerTitle: '',
+          headerShown: false,
+        }}
       />
-      <Stack.Screen name={authNavigations.LOGIN} component={LoginScreen} />
+      <Stack.Screen
+        name={authNavigations.LOGIN}
+        component={LoginScreen}
+        options={{
+          headerTitle: '로그인',
+        }}
+      />
       <Stack.Screen name={authNavigations.SIGNUP} component={SignupScreen} />
     </Stack.Navigator>
   );
