@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
 } from 'react-native';
+import {colors} from '../constants';
 
 interface CustomButtonProps extends PressableProps {
   label: string;
@@ -46,10 +47,10 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   filled: {
-    backgroundColor: '#C63B64',
+    backgroundColor: colors.PINK_700,
   },
   outlined: {
-    borderColor: '#C63B64',
+    borderColor: colors.PINK_700,
     borderWidth: 1,
   },
   large: {
@@ -69,10 +70,10 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   filledText: {
-    color: 'white',
+    color: colors.WHITE,
   },
   outlinedText: {
-    color: '#C63B64',
+    color: colors.PINK_700,
   },
 });
 export default CustomButton;
